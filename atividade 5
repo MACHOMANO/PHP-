@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <form method="post" action="">
+        <label for="num_base">Base do triangulo:</label><br>
+        <input type="number" id="num_base" name="num_base" required><br>
+        <label for="num_altura">Altura do triangulo:</label><br>
+        <input type="number" id="num_altura" name="num_altura" required>
+        <button type="submit" name="dados_triangulo"></button>
+    </form>
+    <?php
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(isset($_POST['dados_triangulo'])){
+            $base_tri = $_POST('num_base');
+            $altura_tri = $_POST('num_altura');
+            $area_tri = ($base_tri * $altura_tri) / 2;
+            
+            echo '<h3> area do triangulo é',$area_tri,'</h3>';
+        }
+
+    }
+
+        if ($area_tri > 100){
+            echo '<p>A area excede um valor limite de 100 </p>';
+        } else {
+            echo '<p>A area esta dentro de um valor limite de 100 </p>';
+        }
+
+
+    ?>    
+
+</body>
+</html>
