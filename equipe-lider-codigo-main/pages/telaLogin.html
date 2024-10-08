@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../styles/loginCadastro.css">
+    <link rel="stylesheet" href="../styles/geral.css">
+</head>
+<body>
+    <header>
+        <img src="../styles/imagens/logo_eptran.png" alt="Logo da Prefeitura de Joinville">
+    </header>
+    <div id="container">
+        <h1 id="h1-login">
+            ENTRE
+        </h1>
+        <form method="post" id="form-login">
+            <div>
+                <label for="usuario-email">
+                    Usuário ou email:
+                </label>
+                <input type="text" id="usuario-email" class="input-login" name="usuario-email" required>
+            </div>
+            <div>
+                <label for="senha">
+                    Senha:
+                </label>
+                <input type="password" id="senha"  class="input-login" name="senha" required>
+            </div>
+            <a href="../pages/telaInicial.html" id="botao-login"><button type="button">Continuar</button></a>
+        </form>
+        <div id="ir-para-cadastro">
+            <p>
+                Não possui cadastro?
+            </p>
+            <a href="../pages/telaCadastro1.html">Cadastre-se aqui</a>
+        </div>
+    </div>
+</body>
+</html>
